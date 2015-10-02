@@ -6,12 +6,12 @@
 " Revision:     0.2
 
 " Message for users:
-" 
+"
 " C-preprocessor directives and extra directives of avra assembler
 " supported too (see http://www.omegav.ntnu.no/~jonah/el/avra.html).
 "
 " Please send me patches.
-" 
+"
 
 " {{{ For version 5.x: Clear all syntax items
 " For version 6.x: Quit when a syntax file was already loaded
@@ -72,7 +72,7 @@ syn case ignore
 " unconditional branches
 syn keyword avrOpcode   rjmp ijmp eijmp jmp rcall eicall call ret reti
 " conditional branches, by status flags
-syn keyword avrOpcode   brbs brbc 
+syn keyword avrOpcode   brbs brbc
 syn keyword avrOpcode   brcc brcs brvs brvc brmi brpl breq brne brhs brhc
 syn keyword avrOpcode   brts brtc brie brid
 " conditional branches, by arithmetic expression
@@ -83,7 +83,7 @@ syn keyword avrOpcode   cpse sbrc sbrs sbic sbis
 syn keyword avrOpcode   com neg inc dec tst clr ser
 " arithmetic, two operands
 syn keyword avrOpcode   add adc adiw sub subi sbc sbci sbiw   cp cpc cpi
-syn keyword avrOpcode   and andi or ori eor sbr cbr 
+syn keyword avrOpcode   and andi or ori eor sbr cbr
 syn keyword avrOpcode   mul muls mulsu fmul fmuls fmulsu
 " load instructions
 syn keyword avrOpcode   mov movw ldi lds ld ldd sts st std lpm elpm spm espm
@@ -101,7 +101,7 @@ syn keyword avrOpcode   nop sleep wdr
 
 " }}}
 
-" {{{ assembler special directives 
+" {{{ assembler special directives
 
 " avrasm special directives
 " including specific to avra assembler and C preprocessor directives
@@ -164,7 +164,7 @@ syn match avrPreProc   "\.error\>"
 syn case match
 " IO registers names
 syn keyword avrIOReg    SREG SPH SPL GIMSK GIFR TIMSK TIFR MCUCR MCUSR
-syn keyword avrIOReg    TCCR0 TCNT0 TCCR1A TCCR1B TCNT1H TCNT1L 
+syn keyword avrIOReg    TCCR0 TCNT0 TCCR1A TCCR1B TCNT1H TCNT1L
 syn keyword avrIOReg    OCR1AH OCR1AL OCR1BH OCR1BL ICR1H ICR1L
 syn keyword avrIOReg    TCCR2 TCNT2 OCR2 ASSR WDTCR
 syn keyword avrIOReg    EEARH EEARL EEDR EECR
@@ -207,7 +207,7 @@ syn match avrIOBit      "\<ADC[0-9]\>"
 " Status Register SREG\: C, Z, N, V, S, H, T, I
 syn keyword avrFlags    C Z N V S H T I
 " special registers
-syn keyword avrRegSpec  X Y Z
+syn keyword avrRegSpec  X XL XH Y YL YH Z ZL ZH
 "syn match avrRegSpec    "\<\([XYZ][-+]\|[-+][XYZ]\)\>"
 
 " }}}
